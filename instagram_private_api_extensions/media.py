@@ -224,7 +224,7 @@ def prepare_video(vid, thumbnail_frame_ts=0.0,
         # write out
         vidclip.write_videofile(
             temp_vid_output_file.name, codec='libx264', audio=True, audio_codec='aac',
-            verbose=False, progress_bar=progress_bar, preset=preset, remove_temp=True)
+            verbose=False, preset=preset, remove_temp=True)
     else:
         # no reencoding
         shutil.copyfile(video_src_filename, temp_vid_output_file.name)
